@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>内容添加</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+        body { padding-top: 70px; }
+        .user-img{width: 40px;height: 40px;margin-top: 5px;display: inline-block}
+        .my-label{margin-top: 10px}
+        .pt10{padding-top: 10px}
+        .pt20{padding-top: 20px}
+        .table > thead > tr > th{border: none}
+        canvas{box-sizing: border-box}
+        .wh64{width: 64px;height: 64px}
+        .pall20{padding: 20px}
+        .border-no-top{border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;padding: 10px}
+        .mgr10{margin-right: 10px}
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">OA系统</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;管理首页</a></li>
+                    <li><a href="user_list.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户管理</a></li>
+                    <li class="active"><a href="con_list.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;内容管理</a></li>
+                    <li><a href="tag_list.html"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;标签管理</a></li>
+                    <li><a href="myemail.html"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;我的邮箱</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div  class="user-img">
+                            <a href="#">
+                                <img src="images/touxiang.jpg" class="img-responsive">
+                            </a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">管理员 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#"><span class="glyphicon glyphicon-screenshot"></span>&nbsp;&nbsp;前台首页</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人首页</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;个人设置</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;账户中心</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;我的收藏</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="list-group">
+                    <a href="con_list.html" class="list-group-item">内容管理</a>
+                    <a href="con_add.html" class="list-group-item active">添加内容</a>
+                </div>
+
+
+            </div>
+            <div class="col-md-10">
+                <div class="page-header">
+                    <h1>内容管理</h1>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li role="presentation"><a href="con_list.html">内容管理</a></li>
+                    <li role="presentation" class="active"><a href="con_add.html">添加内容</a></li>
+                </ul>
+                <form class="pt20">
+                    <div class="form-group">
+                        <label for="exampleInputName31">标题</label>
+                        <input type="text" class="form-control" id="exampleInputName31" placeholder="请输入文章标题">
+                    </div>
+                    <div class="form-group">
+                        <label>文章内容</label>
+                        <textarea class="form-control" rows="15" placeholder="请输入文章正文部分"></textarea>
+                    </div>
+                    <div class="checkbox pull-left">
+                        <label>
+                            <input type="checkbox"> 全局置顶
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-default pull-right">发布文章</button>
+                </form>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container text-center navbar-fixed-bottom">
+        <p class="pall20">联系方式:12345678901</p>
+    </div>
+</footer>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/Chart.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+<script>
+$(function(){
+    $(".navbar-nav li").click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
+})
+</script>
